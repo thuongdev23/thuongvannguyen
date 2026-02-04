@@ -94,7 +94,7 @@ export default function Home() {
         <div className="rounded-[32px] liquid-glass bg-pink-600 row-span-3 p-6 text-white flex flex-col justify-between">
           <div className="h-[200px] w-[250px] flex flex-col mt-12">
             <div className="mt-auto ">
-            <motion.img
+            {/* <motion.img
             src="./ballon.png"
             alt="animated icon"
             className="w-[200px] mx-auto"
@@ -104,7 +104,7 @@ export default function Home() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          />
+          /> */}
             </div>  
             <div className="mt-20">
             <h2 className="text-2xl ">
@@ -123,7 +123,7 @@ export default function Home() {
 
           {/* IMAGE */}
           <img
-            src="./CreativeDesign/.jpeg"
+            src="/avatar-1.jpg"
             className="w-full h-full object-cover"
             alt="Download CV"
           />
@@ -186,7 +186,7 @@ export default function Home() {
             +
           </div>
           <h1 className="text-xl">
-          Weather Card
+          Social Media
           </h1>
         </motion.div>
       </div>

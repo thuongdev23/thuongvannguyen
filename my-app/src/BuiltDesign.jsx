@@ -1,123 +1,97 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function BuiltDesign() {
   const navigate = useNavigate();
 
   return (
-    <div className=" bg-blue-300 relative px-4 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-10">
-      {/* BACK ARROW */}
-      <button
-        onClick={() => navigate(-1)}
-        className="absolute top-1 left-4 z-10 flex items-center gap-3 text-white hover:opacity-100"
-      >
-        <span className="w-11 h-11  flex items-center justify-center">
-          ←
-        </span>
-      </button>
-      {/* GRID */}
-      <div className="grid grid-cols-1 gap-4
-      sm:grid-cols-1 sm:gap-5
-      lg:grid-cols-4 lg:grid-rows-4 lg:gap-6 lg:h-[calc(100vh-80px)]">
-        {/* WKG*/}
-        <motion.div
-          layoutId="wkg-card"
-          onClick={() => navigate("/wkg")}
-          className="cursor-pointer rounded-[32px] bg-white p-6 row-span-2 flex flex-col"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-          <div className=" bg-white p-6 row-span-2 flex flex-col mt-auto">
-            <h3 className="italic text-purple-500 font-thin">
-              Cafe + Restaurant
-            </h3>
-          <h2 className=" text-xl text-purple-500 mt-auto">
-            WKG
-          </h2>
-          </div>
-        </motion.div>
-          {/* CIWIDEY RESORT */}
-          <motion.div
-          layoutId="ciwidey-resort-card"
-          onClick={() => navigate("/ciwidey-resort")}
-          className="cursor-pointer rounded-[32px] bg-white p-6 row-span-2 col-span-2 flex flex-col"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-          <div className=" bg-white p-6 row-span-2 flex flex-col mt-auto">
-            <h3 className="italic text-purple-500 font-thin">
-              Resort
-            </h3>
-          <h2 className=" text-xl text-purple-500 mt-auto">
-            Ciwidey
-          </h2>
-          </div>
-        </motion.div>
-        {/* IMAJI */}
-          <motion.div
-          layoutId="imaji-card"
-          onClick={() => navigate("/imaji")}
-          className="cursor-pointer rounded-[32px] bg-white p-6 row-span-2 flex flex-col"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-           <div className=" bg-white p-6 row-span-2 flex flex-col mt-auto">
-            <h3 className="italic text-purple-500 font-thin">
-              Cafe + Office
-            </h3>
-          <h2 className=" text-xl text-purple-500 mt-auto">
-            Imaji
-          </h2>
-          </div>
-        </motion.div>
-          {/* ACADEMIC PROJECT */}
-         <motion.div
-          layoutId="wisata-card"
-          onClick={() => navigate("/wisata")}
-          className="rounded-[32px]  text-xl bg-white row-span-2 col-span-2 p-6 text-black flex flex-col"          
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-        <div className=" bg-white p-6 row-span-2 flex flex-col mt-auto">
-            <h3 className="italic text-purple-500 font-thin">
-            Tourist Area
-            </h3>
-          <h2 className=" text-xl text-purple-500 mt-auto">
-            Wisata Pasir Gibug Brebes
-          </h2>
-          </div>
-        </motion.div>
-          {/* BUILT DESIGN  */}
-         <motion.div
-          layoutId="built-design-card"
-          onClick={() => navigate("/built-design")}
-          className="rounded-[32px]  text-xl bg-blue-300 row-span-2 p-6 text-black flex flex-col"          
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-        <h2 className=" text-xl text-purple-500 mt-auto">
-            Built Design
-        </h2>
-        </motion.div>
-          {/* KLINIK BENING*/}
-         <motion.div
-          layoutId="klinik-bening-card"
-          onClick={() => navigate("/klinik-bening")}
-          className="rounded-[32px] text-xl bg-white row-span-2 p-6 text-black flex flex-col"          
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        >
-         <div className=" bg-white p-6 row-span-2 flex flex-col mt-auto">
-            <h3 className="italic text-purple-500 font-thin">
-              Facade
-            </h3>
-          <h2 className=" text-xl text-purple-500 mt-auto">
-            Klinik Bening
-          </h2>
-          </div> 
-        </motion.div>
-      </div>    
+    <motion.div
+      layoutId="about-card"
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="min-h-screen bg-gray-200 px-16 py-12 flex justify-center"
+    >
+       <div className="grid grid-cols-12 gap-12 h-full w-full max-w-7xl">
+        {/* LEFT CONTENT */}
+       <div className="col-span-8 flex flex-col justify-between mt-40">
+  {/* CENTERED TEXT BLOCK */}
+  <div className="mx-auto w-full max-w-xl">
+    <h1 className="text-3xl font-semibold mb-8">
+      Hi, I’m Thuong Nguyen!
+    </h1>
+
+    <div className="space-y-6 text-gray-700 leading-[1.7]">
+      <p>
+        I’m passionate about digital spaces, technologies in architecture,
+        psychological design, and sustainability. I’m also a certified
+        barista who is into coffee, education, and learning languages.
+      </p>
+
+      <p>
+        I currently juggling several works at SMMR Studio (Architect),
+        Kodland Türkiye (Teaching & Learning Assistant), and ADA Resources
+        NY (Real-estate Appraisal).
+      </p>
+
+      <p>
+        Language lover: Indonesian, English, Turkish, Thai, Japanese.
+      </p>
+
+      <p className="italic">
+        Care to talk with any of these languages with a glass of coffee?
+      </p>
     </div>
+
+    {/* CONNECT */}
+    <button   className="mt-10 inline-flex items-center gap-3 text-blue-400 hover:opacity-80">
+      <span className="w-6 h-6 rounded-full bg-blue-400 text-white flex items-center justify-center">
+        +
+      </span>
+      CONNECT WITH ME
+    </button>
+  </div>
+
+        {/* BOTTOM NAV */}
+        <div  className="mx-auto w-full max-w-xl flex items-center justify-between text-gray-400 mt-16">
+            <button onClick={() => navigate(-1)} className="flex items-center gap-3 hover:text-gray-600">
+              <span className="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center mt-10">
+                ←
+              </span>
+            </button>
+
+            <div className="flex items-center gap-3 hover:text-gray-600 cursor-pointer mt-10">
+              <Link to="/creative">
+              <span className="text-sm">Creative Design</span>
+            
+              <span className="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center">
+                →
+              </span>
+              </Link>
+            
+            </div>
+          </div>
+        </div>
+        {/* RIGHT IMAGES */}
+        <div className="col-span-2 flex flex-col gap-6">
+          <FramedImage src="./CreativeDesign/img-.jpeg" />
+          <FramedImage src="./CreativeDesign/img-.jpeg" />
+          <FramedImage src="./CreativeDesign/img-.jpeg" />
+        </div>
+      </div>
+    </motion.div>
   );
 }
-
+/* FRAMED IMAGE */
+    function FramedImage({ src }) {
+      return (
+        <div className="bg-gray-100 rounded-2xl p-3 h-[30%]">
+          <div className="rounded-xl overflow-hidden h-full">
+            <img
+              src={src}
+              alt="Ranti Fay"
+              className="w-[150px] h-[200px] object-cover"
+            />
+          </div>
+        </div>
+  );
+}

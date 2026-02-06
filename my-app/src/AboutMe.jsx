@@ -22,19 +22,19 @@ export default function AboutMe() {
 
     <div className="space-y-6 text-gray-700 leading-[1.7]">
       <p>
-        I’m passionate about digital spaces, technologies in architecture,
-        psychological design, and sustainability. I’m also a certified
-        barista who is into coffee, education, and learning languages.
+        Full Stack Developer with hands-on experience in building responsive web applications using ReactJS, Spring Boot, PostgreSQL,
+and Tailwind CSS. Experienced in freelance and academic projects, delivering user-focused, performance-optimized solutions. Strong
+interest in modern web technologies, UI/UX optimization, and b ackend development. Additionally experienced in online English
+tutoring, demonstrating strong communication and teaching skills in international environments.
       </p>
 
       <p>
-        I currently juggling several works at SMMR Studio (Architect),
-        Kodland Türkiye (Teaching & Learning Assistant), and ADA Resources
-        NY (Real-estate Appraisal).
+        I currently working as a freelance for my own web development. Besides that I am also
+        an online English tutor. 
       </p>
 
       <p>
-        Language lover: Indonesian, English, Turkish, Thai, Japanese.
+        Language lover: Vietnamese, English, Turkish, Spanish.
       </p>
 
       <p className="italic">
@@ -73,9 +73,9 @@ export default function AboutMe() {
         </div>
         {/* RIGHT IMAGES */}
         <div className="col-span-2 flex flex-col gap-6">
-          <FramedImage src="./CreativeDesign/img-.jpeg" />
-          <FramedImage src="./CreativeDesign/img-.jpeg" />
-          <FramedImage src="./CreativeDesign/img-.jpeg" />
+          <FramedImage src="/avatar-1.jpg" />
+          <FramedImage src="/avatar-1.jpg" />
+          <FramedImage src="/avatar-1.jpg" />
         </div>
       </div>
     </motion.div>

@@ -106,7 +106,7 @@ export default function Home() {
             }}
           /> */}
             </div>  
-            <div className="mt-20">
+            <div className="mt-60">
             <h2 className="text-2xl ">
               CONNECT<br />WITH ME
             </h2>

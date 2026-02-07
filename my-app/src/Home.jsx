@@ -33,7 +33,7 @@ export default function Home() {
         {/* CREATIVE DESIGN */}
         <motion.div
           layoutId="creative-card"
-          onClick={() => navigate("/creative")}
+          onClick={() => navigate("/experience")}
           className="cursor-pointer rounded-[32px] bg-yellow-400 row-span-2 p-6 text-white relative liquid-glass"          
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
@@ -173,7 +173,7 @@ export default function Home() {
           {/* BUILT DESIGN */}
         <motion.div
           layoutId="built-design-card"
-          onClick={() => navigate("/built-design")}
+          onClick={() => navigate("/social")}
           className="cursor-pointer relative rounded-[32px] liquid-glass bg-blue-300 row-span-2 p-6 text-white"          
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}

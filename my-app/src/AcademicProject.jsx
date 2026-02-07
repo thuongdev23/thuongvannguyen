@@ -75,7 +75,7 @@ export default function AcademicProject() {
 
             {/* LEETCODE LINK */}
             <a
-              href="https://leetcode.com/YOUR_USERNAME"
+              href="https://leetcode.com/u/OAdKdVOOhg/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex items-center gap-3 text-blue-400 hover:opacity-80"

@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-white px-12 py-10
-  bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364]">
-      <div className="  grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5
+    <div className="home-shell">
+      <div className="home-grid grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5
                         lg:grid-cols-4
                         lg:gap-6 
                         lg:h-[calc(100vh-80px)]
@@ -16,7 +15,7 @@ export default function Home() {
     
           layoutId="about-card"
           onClick={() => navigate("/about")}
-          className="cursor-pointer rounded-[32px] bg-gray-200 p-6 liquid-glass"
+          className="home-card cursor-pointer rounded-[32px] bg-gray-200 p-6 liquid-glass"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -34,7 +33,7 @@ export default function Home() {
         <motion.div
           layoutId="creative-card"
           onClick={() => navigate("/experience")}
-          className="cursor-pointer rounded-[32px] bg-yellow-400 row-span-2 p-6 text-white relative liquid-glass"          
+          className="home-card cursor-pointer rounded-[32px] bg-yellow-400 row-span-2 p-6 text-white relative liquid-glass"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -46,6 +45,11 @@ export default function Home() {
                           text-gray-600 text-lg font-medium">
             +
           </div>
+          <div className="experience-motion" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
           <h1 className="text-xl">
           Experience
           </h1>
@@ -54,7 +58,7 @@ export default function Home() {
           <motion.div
           layoutId="projects-card"
           onClick={() => navigate("/projects")}
-          className="cursor-pointer relative rounded-[32px] bg-gray-200 row-span-2 p-6 text-black liquid-glass"          
+          className="home-card cursor-pointer relative rounded-[32px] bg-gray-200 row-span-2 p-6 text-black liquid-glass"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -65,6 +69,12 @@ export default function Home() {
                           text-gray-600 text-lg font-medium">
             +
           </div>
+          <div className="projects-motion" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
           <h1 className="text-xl">
          Projects
           </h1>
@@ -73,7 +83,7 @@ export default function Home() {
           <motion.div
           layoutId="design-inter-card"
           onClick={() => navigate("/built-design-inter")}
-          className="cursor-pointer rounded-[32px] liquid-glass bg-red-500 row-span-1 p-6 text-white relative"          
+          className="home-card cursor-pointer rounded-[32px] liquid-glass bg-red-500 row-span-1 p-6 text-white relative"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -86,45 +96,43 @@ export default function Home() {
           >
             +
           </div>
+          <div className="creative-motion" aria-hidden="true">
+            <span />
+            <span />
+          </div>
           <h1 className="text-xl">
-          Creative Projects
+          App Building
            </h1>
         </motion.div>
         {/* CONNECT WITH ME */}
-        <div className="rounded-[32px] liquid-glass bg-pink-600 row-span-3 p-6 text-white flex flex-col justify-between">
-          <div className="h-[200px] w-[250px] flex flex-col mt-12">
-            <div className="mt-auto ">
-            {/* <motion.img
-            src="./ballon.png"
-            alt="animated icon"
-            className="w-[200px] mx-auto"
-            animate={{ y: [0, -15, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          /> */}
-            </div>  
-            <div className="mt-60">
-            <h2 className="text-2xl ">
+        <div className="home-card rounded-[32px] liquid-glass bg-pink-600 row-span-3 p-6 text-white flex flex-col justify-between">
+          <div className="connect-visual" aria-hidden="true">
+            <span className="connect-orbit connect-orbit-one" />
+            <span className="connect-orbit connect-orbit-two" />
+            <span className="connect-orbit connect-orbit-three" />
+            <span className="connect-core">✦</span>
+            <span className="connect-node connect-node-one">in</span>
+            <span className="connect-node connect-node-two">✉</span>
+          </div>
+          <div>
+            <p className="connect-kicker">Open to good ideas</p>
+            <h2 className="text-2xl">
               CONNECT<br />WITH ME
             </h2>
-            </div>
           </div>
           <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
-            <a href="https://www.linkedin.com/in/thuong-nguyen-275a24190/" target="_blank">
+            <a href="https://www.linkedin.com/in/thuong-nguyen-275a24190/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
             →
             </a>
           </div>
         </div>
           {/* Download cv */}
-          <div className="rounded-[32px] liquid-glass row-span-3 overflow-hidden relative">
+          <div className="home-card rounded-[32px] liquid-glass row-span-3 overflow-hidden relative">
 
           {/* IMAGE */}
           <img
             src="/avatar-1.jpg"
-            className="w-full h-full object-cover"
+            className="cv-image w-full h-full object-cover"
             alt="Download CV"
           />
 
@@ -150,12 +158,13 @@ export default function Home() {
               </span>
             </a>
           </div>
+          <span className="cv-sheen" aria-hidden="true" />
         </div>
          {/* ACADEMIC PROJECT */}
          <motion.div
           layoutId="academic-card"
           onClick={() => navigate("/academic")}
-          className="cursor-pointer relative rounded-[32px] liquid-glass bg-gray-200 row-span-2 p-6 text-black"          
+          className="home-card cursor-pointer relative rounded-[32px] liquid-glass bg-gray-200 row-span-2 p-6 text-black"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -166,6 +175,10 @@ export default function Home() {
                           text-gray-600 text-lg font-medium">
             +
           </div>
+          <div className="leetcode-motion" aria-hidden="true">
+            <span>&lt;/&gt;</span>
+            <i />
+          </div>
           <h1 className="text-xl">
           LEETCODE<br />Probems Solved
           </h1>
@@ -174,7 +187,7 @@ export default function Home() {
         <motion.div
           layoutId="built-design-card"
           onClick={() => navigate("/social")}
-          className="cursor-pointer relative rounded-[32px] liquid-glass bg-blue-300 row-span-2 p-6 text-white"          
+          className="home-card cursor-pointer relative rounded-[32px] liquid-glass bg-blue-300 row-span-2 p-6 text-white"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         >
@@ -184,6 +197,12 @@ export default function Home() {
                           flex items-center justify-center 
                           text-gray-600 text-lg font-medium">
             +
+          </div>
+          <div className="social-motion" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
           </div>
           <h1 className="text-xl">
           Social Media

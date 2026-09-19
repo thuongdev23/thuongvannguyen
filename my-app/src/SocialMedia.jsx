@@ -8,9 +8,9 @@ export default function SocialMedia() {
     <motion.div
       layoutId="about-card"
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="min-h-screen bg-gray-200 px-16 py-12 flex justify-center"
+      className="page-shell flex justify-center"
     >
-      <div className="grid grid-cols-12 gap-12 h-full w-full max-w-7xl">
+      <div className="page-grid grid grid-cols-12 h-full w-full max-w-7xl">
 
         {/* LEFT CONTENT */}
         <div className="col-span-8 mt-32">
@@ -39,7 +39,6 @@ export default function SocialMedia() {
                 style="Fast-paced, visual, concise storytelling"
                 link="https://www.tiktok.com/@thuongvivu23?_r=1&_t=ZS-93ighXUvpVF"
               />
-
               <ContentSection
                 platform="Instagram"
                 handle="@yourhandle"
@@ -51,7 +50,6 @@ export default function SocialMedia() {
                 style="Minimal, aesthetic, narrative-based"
                 link="https://www.instagram.com/thuongvivu?igsh=aTFmdTF5OXJsbmk4&utm_source=qr"
               />
-
               <ContentSection
                 platform="YouTube (Short-form / Planned)"
                 handle="Channel in progress"
@@ -62,6 +60,7 @@ export default function SocialMedia() {
                 ]}
                 style="Clear explanations, calm pacing"
                 link="https://www.youtube.com/@thuongvivu"
+
               />
 
               <ContentSection
